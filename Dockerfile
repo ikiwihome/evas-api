@@ -8,7 +8,7 @@ RUN go mod download
 
 COPY . .
 
-ARG VERSION=release
+ARG VERSION=1.0.0
 ARG COMMIT=none
 ARG BUILD_DATE=2026-03-18
 
