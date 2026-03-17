@@ -8,9 +8,9 @@ RUN go mod download
 
 COPY . .
 
-ARG VERSION=dev
+ARG VERSION=release
 ARG COMMIT=none
-ARG BUILD_DATE=unknown
+ARG BUILD_DATE=2026-03-18
 
 RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w -X 'main.Version=${VERSION}' -X 'main.Commit=${COMMIT}' -X 'main.BuildDate=${BUILD_DATE}'" -o ./evas-api ./cmd/server/
 
