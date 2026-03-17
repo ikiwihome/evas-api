@@ -25,7 +25,7 @@ import (
 )
 
 const (
-	defaultManagementReleaseURL  = "https://api.github.com/repos/router-for-me/Cli-Proxy-API-Management-Center/releases/latest"
+	defaultManagementReleaseURL  = "https://api.github.com/repos/ikiwihome/evas-api-gateway-center/releases/latest"
 	defaultManagementFallbackURL = "https://cpamc.router-for.me/"
 	managementAssetName          = "management.html"
 	httpUserAgent                = "evas-api-management-updater"
