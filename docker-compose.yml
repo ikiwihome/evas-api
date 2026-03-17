@@ -1,6 +1,6 @@
 services:
   evas-api:
-    image: ${CLI_PROXY_IMAGE:-ikiwi/evas-api:latest}
+    image: ${CLI_PROXY_IMAGE:-ikiwicc/evas-api:latest}
     pull_policy: always
     build:
       context: .
