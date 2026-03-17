@@ -6,7 +6,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/config"
+	"github.com/ikiwihome/evas-api/v6/internal/config"
 )
 
 type GeminiModelsSummary struct {

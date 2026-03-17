@@ -14,7 +14,7 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/misc"
+	"github.com/ikiwihome/evas-api/v6/internal/misc"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -71,7 +71,7 @@ func createReverseProxy(upstreamURL string, secretSource SecretSource) (*httputi
 		originalDirector(req)
 		req.Host = parsed.Host
 
-		// Remove client's Authorization header - it was only used for CLI Proxy API authentication
+		// Remove client's Authorization header - it was only used for EVAS Proxy API authentication
 		// We will set our own Authorization using the configured upstream-api-key
 		req.Header.Del("Authorization")
 		req.Header.Del("X-Api-Key")

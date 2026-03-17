@@ -13,12 +13,12 @@ import (
 	"strings"
 	"time"
 
-	kimiauth "github.com/router-for-me/CLIProxyAPI/v6/internal/auth/kimi"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/config"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/thinking"
-	cliproxyauth "github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/auth"
-	cliproxyexecutor "github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/executor"
-	sdktranslator "github.com/router-for-me/CLIProxyAPI/v6/sdk/translator"
+	kimiauth "github.com/ikiwihome/evas-api/v6/internal/auth/kimi"
+	"github.com/ikiwihome/evas-api/v6/internal/config"
+	"github.com/ikiwihome/evas-api/v6/internal/thinking"
+	cliproxyauth "github.com/ikiwihome/evas-api/v6/sdk/cliproxy/auth"
+	cliproxyexecutor "github.com/ikiwihome/evas-api/v6/sdk/cliproxy/executor"
+	sdktranslator "github.com/ikiwihome/evas-api/v6/sdk/translator"
 	log "github.com/sirupsen/logrus"
 	"github.com/tidwall/gjson"
 	"github.com/tidwall/sjson"
@@ -561,7 +561,7 @@ func getKimiDeviceModel() string {
 func getKimiDeviceID() string {
 	homeDir, err := os.UserHomeDir()
 	if err != nil {
-		return "cli-proxy-api-device"
+		return "evas-api-device"
 	}
 	// Check kimi-cli's device_id location first (platform-specific)
 	var kimiShareDir string
@@ -581,7 +581,7 @@ func getKimiDeviceID() string {
 	if data, err := os.ReadFile(deviceIDPath); err == nil {
 		return strings.TrimSpace(string(data))
 	}
-	return "cli-proxy-api-device"
+	return "evas-api-device"
 }
 
 // kimiCreds extracts the access token from auth.

@@ -1,4 +1,4 @@
-// Package middleware provides Gin HTTP middleware for the CLI Proxy API server.
+// Package middleware provides Gin HTTP middleware for the EVAS Proxy API server.
 // It includes a sophisticated response writer wrapper designed to capture and log request and response data,
 // including support for streaming responses, without impacting latency.
 package middleware
@@ -10,8 +10,8 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/interfaces"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/logging"
+	"github.com/ikiwihome/evas-api/v6/internal/interfaces"
+	"github.com/ikiwihome/evas-api/v6/internal/logging"
 )
 
 const requestBodyOverrideContextKey = "REQUEST_BODY_OVERRIDE"

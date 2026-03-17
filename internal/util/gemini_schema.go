@@ -1,4 +1,4 @@
-// Package util provides utility functions for the CLI Proxy API server.
+// Package util provides utility functions for the EVAS Proxy API server.
 package util
 
 import (

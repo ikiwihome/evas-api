@@ -14,11 +14,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/config"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/util"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/watcher/diff"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/watcher/synthesizer"
-	coreauth "github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/auth"
+	"github.com/ikiwihome/evas-api/v6/internal/config"
+	"github.com/ikiwihome/evas-api/v6/internal/util"
+	"github.com/ikiwihome/evas-api/v6/internal/watcher/diff"
+	"github.com/ikiwihome/evas-api/v6/internal/watcher/synthesizer"
+	coreauth "github.com/ikiwihome/evas-api/v6/sdk/cliproxy/auth"
 	log "github.com/sirupsen/logrus"
 )
 

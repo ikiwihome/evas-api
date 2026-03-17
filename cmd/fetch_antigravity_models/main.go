@@ -25,10 +25,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/logging"
-	sdkauth "github.com/router-for-me/CLIProxyAPI/v6/sdk/auth"
-	coreauth "github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/auth"
-	"github.com/router-for-me/CLIProxyAPI/v6/sdk/proxyutil"
+	"github.com/ikiwihome/evas-api/v6/internal/logging"
+	sdkauth "github.com/ikiwihome/evas-api/v6/sdk/auth"
+	coreauth "github.com/ikiwihome/evas-api/v6/sdk/cliproxy/auth"
+	"github.com/ikiwihome/evas-api/v6/sdk/proxyutil"
 	log "github.com/sirupsen/logrus"
 	"github.com/tidwall/gjson"
 )

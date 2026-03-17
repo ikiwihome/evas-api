@@ -1,4 +1,4 @@
-// Package cliproxy provides the core service implementation for the CLI Proxy API.
+// Package cliproxy provides the core service implementation for the EVAS Proxy API.
 // It includes service lifecycle management, authentication handling, file watching,
 // and integration with various AI service providers through a unified interface.
 package cliproxy
@@ -12,17 +12,17 @@ import (
 	"sync"
 	"time"
 
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/api"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/registry"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/runtime/executor"
-	_ "github.com/router-for-me/CLIProxyAPI/v6/internal/usage"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/watcher"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/wsrelay"
-	sdkaccess "github.com/router-for-me/CLIProxyAPI/v6/sdk/access"
-	sdkAuth "github.com/router-for-me/CLIProxyAPI/v6/sdk/auth"
-	coreauth "github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/auth"
-	"github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/usage"
-	"github.com/router-for-me/CLIProxyAPI/v6/sdk/config"
+	"github.com/ikiwihome/evas-api/v6/internal/api"
+	"github.com/ikiwihome/evas-api/v6/internal/registry"
+	"github.com/ikiwihome/evas-api/v6/internal/runtime/executor"
+	_ "github.com/ikiwihome/evas-api/v6/internal/usage"
+	"github.com/ikiwihome/evas-api/v6/internal/watcher"
+	"github.com/ikiwihome/evas-api/v6/internal/wsrelay"
+	sdkaccess "github.com/ikiwihome/evas-api/v6/sdk/access"
+	sdkAuth "github.com/ikiwihome/evas-api/v6/sdk/auth"
+	coreauth "github.com/ikiwihome/evas-api/v6/sdk/cliproxy/auth"
+	"github.com/ikiwihome/evas-api/v6/sdk/cliproxy/usage"
+	"github.com/ikiwihome/evas-api/v6/sdk/config"
 	log "github.com/sirupsen/logrus"
 )
 

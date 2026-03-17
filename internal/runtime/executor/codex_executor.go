@@ -10,14 +10,14 @@ import (
 	"strings"
 	"time"
 
-	codexauth "github.com/router-for-me/CLIProxyAPI/v6/internal/auth/codex"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/config"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/misc"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/thinking"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/util"
-	cliproxyauth "github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/auth"
-	cliproxyexecutor "github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/executor"
-	sdktranslator "github.com/router-for-me/CLIProxyAPI/v6/sdk/translator"
+	codexauth "github.com/ikiwihome/evas-api/v6/internal/auth/codex"
+	"github.com/ikiwihome/evas-api/v6/internal/config"
+	"github.com/ikiwihome/evas-api/v6/internal/misc"
+	"github.com/ikiwihome/evas-api/v6/internal/thinking"
+	"github.com/ikiwihome/evas-api/v6/internal/util"
+	cliproxyauth "github.com/ikiwihome/evas-api/v6/sdk/cliproxy/auth"
+	cliproxyexecutor "github.com/ikiwihome/evas-api/v6/sdk/cliproxy/executor"
+	sdktranslator "github.com/ikiwihome/evas-api/v6/sdk/translator"
 	log "github.com/sirupsen/logrus"
 	"github.com/tidwall/gjson"
 	"github.com/tidwall/sjson"
@@ -618,7 +618,7 @@ func (e *CodexExecutor) cacheHelper(ctx context.Context, from sdktranslator.Form
 		}
 	} else if from == "openai" {
 		if apiKey := strings.TrimSpace(apiKeyFromContext(ctx)); apiKey != "" {
-			cache.ID = uuid.NewSHA1(uuid.NameSpaceOID, []byte("cli-proxy-api:codex:prompt-cache:"+apiKey)).String()
+			cache.ID = uuid.NewSHA1(uuid.NameSpaceOID, []byte("evas-api:codex:prompt-cache:"+apiKey)).String()
 		}
 	}
 

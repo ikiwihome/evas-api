@@ -8,8 +8,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
-	cliproxyexecutor "github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/executor"
-	sdktranslator "github.com/router-for-me/CLIProxyAPI/v6/sdk/translator"
+	cliproxyexecutor "github.com/ikiwihome/evas-api/v6/sdk/cliproxy/executor"
+	sdktranslator "github.com/ikiwihome/evas-api/v6/sdk/translator"
 	"github.com/tidwall/gjson"
 )
 
@@ -37,7 +37,7 @@ func TestCodexExecutorCacheHelper_OpenAIChatCompletions_StablePromptCacheKeyFrom
 		t.Fatalf("read request body: %v", errRead)
 	}
 
-	expectedKey := uuid.NewSHA1(uuid.NameSpaceOID, []byte("cli-proxy-api:codex:prompt-cache:test-api-key")).String()
+	expectedKey := uuid.NewSHA1(uuid.NameSpaceOID, []byte("evas-api:codex:prompt-cache:test-api-key")).String()
 	gotKey := gjson.GetBytes(body, "prompt_cache_key").String()
 	if gotKey != expectedKey {
 		t.Fatalf("prompt_cache_key = %q, want %q", gotKey, expectedKey)

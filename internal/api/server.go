@@ -1,4 +1,4 @@
-// Package api provides the HTTP API server implementation for the CLI Proxy API.
+// Package api provides the HTTP API server implementation for the EVAS Proxy API.
 // It includes the main server struct, routing setup, middleware for CORS and authentication,
 // and integration with various AI API handlers (OpenAI, Claude, Gemini).
 // The server supports hot-reloading of clients and configuration.
@@ -19,23 +19,23 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/access"
-	managementHandlers "github.com/router-for-me/CLIProxyAPI/v6/internal/api/handlers/management"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/api/middleware"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/api/modules"
-	ampmodule "github.com/router-for-me/CLIProxyAPI/v6/internal/api/modules/amp"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/config"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/logging"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/managementasset"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/usage"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/util"
-	sdkaccess "github.com/router-for-me/CLIProxyAPI/v6/sdk/access"
-	"github.com/router-for-me/CLIProxyAPI/v6/sdk/api/handlers"
-	"github.com/router-for-me/CLIProxyAPI/v6/sdk/api/handlers/claude"
-	"github.com/router-for-me/CLIProxyAPI/v6/sdk/api/handlers/gemini"
-	"github.com/router-for-me/CLIProxyAPI/v6/sdk/api/handlers/openai"
-	sdkAuth "github.com/router-for-me/CLIProxyAPI/v6/sdk/auth"
-	"github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/auth"
+	"github.com/ikiwihome/evas-api/v6/internal/access"
+	managementHandlers "github.com/ikiwihome/evas-api/v6/internal/api/handlers/management"
+	"github.com/ikiwihome/evas-api/v6/internal/api/middleware"
+	"github.com/ikiwihome/evas-api/v6/internal/api/modules"
+	ampmodule "github.com/ikiwihome/evas-api/v6/internal/api/modules/amp"
+	"github.com/ikiwihome/evas-api/v6/internal/config"
+	"github.com/ikiwihome/evas-api/v6/internal/logging"
+	"github.com/ikiwihome/evas-api/v6/internal/managementasset"
+	"github.com/ikiwihome/evas-api/v6/internal/usage"
+	"github.com/ikiwihome/evas-api/v6/internal/util"
+	sdkaccess "github.com/ikiwihome/evas-api/v6/sdk/access"
+	"github.com/ikiwihome/evas-api/v6/sdk/api/handlers"
+	"github.com/ikiwihome/evas-api/v6/sdk/api/handlers/claude"
+	"github.com/ikiwihome/evas-api/v6/sdk/api/handlers/gemini"
+	"github.com/ikiwihome/evas-api/v6/sdk/api/handlers/openai"
+	sdkAuth "github.com/ikiwihome/evas-api/v6/sdk/auth"
+	"github.com/ikiwihome/evas-api/v6/sdk/cliproxy/auth"
 	log "github.com/sirupsen/logrus"
 	"gopkg.in/yaml.v3"
 )
@@ -350,7 +350,7 @@ func (s *Server) setupRoutes() {
 	// Root endpoint
 	s.engine.GET("/", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
-			"message": "CLI Proxy API Server",
+			"message": "EVAS Proxy API Server",
 			"endpoints": []string{
 				"POST /v1/chat/completions",
 				"POST /v1/completions",

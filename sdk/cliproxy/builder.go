@@ -1,4 +1,4 @@
-// Package cliproxy provides the core service implementation for the CLI Proxy API.
+// Package cliproxy provides the core service implementation for the EVAS Proxy API.
 // It includes service lifecycle management, authentication handling, file watching,
 // and integration with various AI service providers through a unified interface.
 package cliproxy
@@ -7,12 +7,12 @@ import (
 	"fmt"
 	"strings"
 
-	configaccess "github.com/router-for-me/CLIProxyAPI/v6/internal/access/config_access"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/api"
-	sdkaccess "github.com/router-for-me/CLIProxyAPI/v6/sdk/access"
-	sdkAuth "github.com/router-for-me/CLIProxyAPI/v6/sdk/auth"
-	coreauth "github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/auth"
-	"github.com/router-for-me/CLIProxyAPI/v6/sdk/config"
+	configaccess "github.com/ikiwihome/evas-api/v6/internal/access/config_access"
+	"github.com/ikiwihome/evas-api/v6/internal/api"
+	sdkaccess "github.com/ikiwihome/evas-api/v6/sdk/access"
+	sdkAuth "github.com/ikiwihome/evas-api/v6/sdk/auth"
+	coreauth "github.com/ikiwihome/evas-api/v6/sdk/cliproxy/auth"
+	"github.com/ikiwihome/evas-api/v6/sdk/config"
 )
 
 // Builder constructs a Service instance with customizable providers.

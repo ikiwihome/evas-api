@@ -1,4 +1,4 @@
-// Package usage provides usage tracking and logging functionality for the CLI Proxy API server.
+// Package usage provides usage tracking and logging functionality for the EVAS Proxy API server.
 // It includes plugins for monitoring API usage, token consumption, and other metrics
 // to help with observability and billing purposes.
 package usage
@@ -12,7 +12,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	coreusage "github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/usage"
+	coreusage "github.com/ikiwihome/evas-api/v6/sdk/cliproxy/usage"
 )
 
 var statisticsEnabled atomic.Bool

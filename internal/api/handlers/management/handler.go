@@ -13,11 +13,11 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/buildinfo"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/config"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/usage"
-	sdkAuth "github.com/router-for-me/CLIProxyAPI/v6/sdk/auth"
-	coreauth "github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/auth"
+	"github.com/ikiwihome/evas-api/v6/internal/buildinfo"
+	"github.com/ikiwihome/evas-api/v6/internal/config"
+	"github.com/ikiwihome/evas-api/v6/internal/usage"
+	sdkAuth "github.com/ikiwihome/evas-api/v6/sdk/auth"
+	coreauth "github.com/ikiwihome/evas-api/v6/sdk/cliproxy/auth"
 	"golang.org/x/crypto/bcrypt"
 )
 

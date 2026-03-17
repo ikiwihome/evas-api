@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/interfaces"
+	"github.com/ikiwihome/evas-api/v6/internal/interfaces"
 )
 
 type StreamForwardOptions struct {

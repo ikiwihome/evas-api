@@ -18,7 +18,7 @@ import (
 	"github.com/go-git/go-git/v6/plumbing/object"
 	"github.com/go-git/go-git/v6/plumbing/transport"
 	"github.com/go-git/go-git/v6/plumbing/transport/http"
-	cliproxyauth "github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/auth"
+	cliproxyauth "github.com/ikiwihome/evas-api/v6/sdk/cliproxy/auth"
 )
 
 // gcInterval defines minimum time between garbage collection runs.
@@ -596,7 +596,7 @@ func (s *GitTokenStore) commitAndPushLocked(message string, relPaths ...string) 
 		message = "Update auth store"
 	}
 	signature := &object.Signature{
-		Name:  "CLIProxyAPI",
+		Name:  "evas-api",
 		Email: "cliproxy@local",
 		When:  time.Now(),
 	}

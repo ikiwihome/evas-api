@@ -1,4 +1,4 @@
-// Package config provides configuration management for the CLI Proxy API server.
+// Package config provides configuration management for the EVAS Proxy API server.
 // It handles loading and parsing YAML configuration files, and provides structured
 // access to application settings including server port, authentication directory,
 // debug settings, proxy configuration, and API keys.
@@ -19,7 +19,7 @@ import (
 )
 
 const (
-	DefaultPanelGitHubRepository = "https://github.com/router-for-me/Cli-Proxy-API-Management-Center"
+	DefaultPanelGitHubRepository = "https://github.com/ikiwihome/Cli-Proxy-API-Management-Center"
 	DefaultPprofAddr             = "127.0.0.1:8316"
 )
 

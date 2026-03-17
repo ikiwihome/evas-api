@@ -1,4 +1,4 @@
-// Package handlers provides core API handler functionality for the CLI Proxy API server.
+// Package handlers provides core API handler functionality for the EVAS Proxy API server.
 // It includes common types, client management, load balancing, and error handling
 // shared across all API endpoint handlers (OpenAI, Claude, Gemini).
 package handlers
@@ -14,14 +14,14 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/interfaces"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/logging"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/thinking"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/util"
-	coreauth "github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/auth"
-	coreexecutor "github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/executor"
-	"github.com/router-for-me/CLIProxyAPI/v6/sdk/config"
-	sdktranslator "github.com/router-for-me/CLIProxyAPI/v6/sdk/translator"
+	"github.com/ikiwihome/evas-api/v6/internal/interfaces"
+	"github.com/ikiwihome/evas-api/v6/internal/logging"
+	"github.com/ikiwihome/evas-api/v6/internal/thinking"
+	"github.com/ikiwihome/evas-api/v6/internal/util"
+	coreauth "github.com/ikiwihome/evas-api/v6/sdk/cliproxy/auth"
+	coreexecutor "github.com/ikiwihome/evas-api/v6/sdk/cliproxy/executor"
+	"github.com/ikiwihome/evas-api/v6/sdk/config"
+	sdktranslator "github.com/ikiwihome/evas-api/v6/sdk/translator"
 	"golang.org/x/net/context"
 )
 

@@ -3,9 +3,9 @@ package cliproxy
 import (
 	"context"
 
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/watcher"
-	coreauth "github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/auth"
-	"github.com/router-for-me/CLIProxyAPI/v6/sdk/config"
+	"github.com/ikiwihome/evas-api/v6/internal/watcher"
+	coreauth "github.com/ikiwihome/evas-api/v6/sdk/cliproxy/auth"
+	"github.com/ikiwihome/evas-api/v6/sdk/config"
 )
 
 func defaultWatcherFactory(configPath, authDir string, reload func(*config.Config)) (*WatcherWrapper, error) {

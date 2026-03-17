@@ -1,4 +1,4 @@
-// Package logging provides request logging functionality for the CLI Proxy API server.
+// Package logging provides request logging functionality for the EVAS Proxy API server.
 // It handles capturing and storing detailed HTTP request and response data when enabled
 // through configuration, supporting both regular and streaming responses.
 package logging
@@ -21,9 +21,9 @@ import (
 	"github.com/klauspost/compress/zstd"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/buildinfo"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/interfaces"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/util"
+	"github.com/ikiwihome/evas-api/v6/internal/buildinfo"
+	"github.com/ikiwihome/evas-api/v6/internal/interfaces"
+	"github.com/ikiwihome/evas-api/v6/internal/util"
 )
 
 var requestLogID atomic.Uint64

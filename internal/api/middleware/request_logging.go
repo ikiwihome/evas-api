@@ -1,4 +1,4 @@
-// Package middleware provides HTTP middleware components for the CLI Proxy API server.
+// Package middleware provides HTTP middleware components for the EVAS Proxy API server.
 // This file contains the request logging middleware that captures comprehensive
 // request and response data when enabled through configuration.
 package middleware
@@ -11,8 +11,8 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/logging"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/util"
+	"github.com/ikiwihome/evas-api/v6/internal/logging"
+	"github.com/ikiwihome/evas-api/v6/internal/util"
 )
 
 const maxErrorOnlyCapturedRequestBodyBytes int64 = 1 << 20 // 1 MiB

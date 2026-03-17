@@ -1,4 +1,4 @@
-// Package cmd provides command-line interface functionality for the CLI Proxy API server.
+// Package cmd provides command-line interface functionality for the EVAS Proxy API server.
 // It includes authentication flows for various AI service providers, service startup,
 // and other command-line operations.
 package cmd
@@ -17,12 +17,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/auth/gemini"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/config"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/interfaces"
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/misc"
-	sdkAuth "github.com/router-for-me/CLIProxyAPI/v6/sdk/auth"
-	cliproxyauth "github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/auth"
+	"github.com/ikiwihome/evas-api/v6/internal/auth/gemini"
+	"github.com/ikiwihome/evas-api/v6/internal/config"
+	"github.com/ikiwihome/evas-api/v6/internal/interfaces"
+	"github.com/ikiwihome/evas-api/v6/internal/misc"
+	sdkAuth "github.com/ikiwihome/evas-api/v6/sdk/auth"
+	cliproxyauth "github.com/ikiwihome/evas-api/v6/sdk/cliproxy/auth"
 	log "github.com/sirupsen/logrus"
 	"github.com/tidwall/gjson"
 )

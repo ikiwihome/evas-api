@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/config"
+	"github.com/ikiwihome/evas-api/v6/internal/config"
 )
 
 // BuildConfigChangeDetails computes a redacted, human-readable list of config changes.

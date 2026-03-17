@@ -3,7 +3,7 @@ package auth
 import (
 	"fmt"
 
-	"github.com/router-for-me/CLIProxyAPI/v6/internal/interfaces"
+	"github.com/ikiwihome/evas-api/v6/internal/interfaces"
 )
 
 // ProjectSelectionError indicates that the user must choose a specific project ID.

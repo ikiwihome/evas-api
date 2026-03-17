@@ -1,5 +1,5 @@
 // Package main demonstrates how to create a custom AI provider executor
-// and integrate it with the CLI Proxy API server. This example shows how to:
+// and integrate it with the EVAS Proxy API server. This example shows how to:
 // - Create a custom executor that implements the Executor interface
 // - Register custom translators for request/response transformation
 // - Integrate the custom provider with the SDK server
@@ -24,14 +24,14 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/router-for-me/CLIProxyAPI/v6/sdk/api"
-	sdkAuth "github.com/router-for-me/CLIProxyAPI/v6/sdk/auth"
-	"github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy"
-	coreauth "github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/auth"
-	clipexec "github.com/router-for-me/CLIProxyAPI/v6/sdk/cliproxy/executor"
-	"github.com/router-for-me/CLIProxyAPI/v6/sdk/config"
-	"github.com/router-for-me/CLIProxyAPI/v6/sdk/logging"
-	sdktr "github.com/router-for-me/CLIProxyAPI/v6/sdk/translator"
+	"github.com/ikiwihome/evas-api/v6/sdk/api"
+	sdkAuth "github.com/ikiwihome/evas-api/v6/sdk/auth"
+	"github.com/ikiwihome/evas-api/v6/sdk/cliproxy"
+	coreauth "github.com/ikiwihome/evas-api/v6/sdk/cliproxy/auth"
+	clipexec "github.com/ikiwihome/evas-api/v6/sdk/cliproxy/executor"
+	"github.com/ikiwihome/evas-api/v6/sdk/config"
+	"github.com/ikiwihome/evas-api/v6/sdk/logging"
+	sdktr "github.com/ikiwihome/evas-api/v6/sdk/translator"
 )
 
 const (
