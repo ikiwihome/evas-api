@@ -350,7 +350,7 @@ func (s *Server) setupRoutes() {
 	// Root endpoint
 	s.engine.GET("/", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
-			"message": "EVAS Proxy API Server",
+			"message": "EVAS Intelligence LLM API Server",
 			"endpoints": []string{
 				"POST /v1/chat/completions",
 				"POST /v1/completions",
